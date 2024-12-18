@@ -33,7 +33,23 @@ module.exports = withMT({
       animation: {
         flash: 'flash 0.2s ease-in-out', // Apply the flash keyframes with duration
       },
+      typography: {
+        DEFAULT: {
+          css: {
+            h2: {
+              fontFamily: 'Junicode-Bold',
+              fontSize: '1.875rem', // Equivalent to text-2xl
+              color: '#ffffff',
+            },
+            p: {
+              fontFamily: 'Junicode-Reg',
+              fontSize: '1.125rem', // Equivalent to text-lg
+              color: '#ffffff',
+            },
+          },
+        },
+      },
     },
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/typography'),],
 });

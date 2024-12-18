@@ -1,8 +1,10 @@
 // import { useState } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import TopNav from './TopNav'
 import Home from './Home'
+import TheTrip from './TheTrip'
 import Gigs from './Gigs'
 import Contact from './Contact'
 import Footer from './Footer'
@@ -16,11 +18,11 @@ function App() {
   return (
 <Router>
       <div className="bg-background">
-        <img
+      <Link to="/"><img
           src={Logo}
           alt="Logo"
           className="absolute top-0 left-0 m-4 w-1/3 sm:w-1/6 md:w-1/4 lg:w-1/2 max-w-xs"
-        />
+        /></Link>
         <img
           src={TopPic}
           alt="Top Picture"
@@ -33,11 +35,14 @@ function App() {
           }}
         />
         <TopNav />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/gigs" element={<Gigs />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
+        <div className="flex justify-center items-center">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/thetrip" element={<TheTrip />} />
+            <Route path="/gigs" element={<Gigs />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </div>
         <Footer />
       </div>
     </Router>

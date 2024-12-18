@@ -7,7 +7,7 @@ function TopNav() {
 
 <div className="flex justify-center items-center">
     <div className="row flex">
-    <Link to="/">
+    <Link to="/thetrip">
   <Button placeholder="" onPointerEnterCapture={() => {}} onPointerLeaveCapture={() => {}}
     className="rounded-md rounded-r-none py-2 px-4">
     <span className="hover:animate-flash">The Trip</span>
