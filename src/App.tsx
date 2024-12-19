@@ -34,7 +34,16 @@ function App() {
             maskRepeat: "no-repeat",
           }}
         />
+        <p className="absolute top-4 right-4 font-junicodereg text-white text-xsm sm:text-base lg:text-lg">
+      <Link
+        to="/"
+        className="hover:underline hover:text-gray-300 transition duration-200"
+      >
+        Home
+      </Link>
+    </p>
         <TopNav />
+        <br/>
         <div className="flex justify-center items-center">
           <Routes>
             <Route path="/" element={<Home />} />
