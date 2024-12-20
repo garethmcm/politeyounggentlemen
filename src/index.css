@@ -64,3 +64,17 @@
   font-weight: Bold;
   font-style: normal;
 }
+
+@font-face {
+  font-family: "Chivo-ExtraBold";
+  src: url("./assets/fonts/Chivo-ExtraBold.otf") format("opentype");
+  font-weight: ExtraBold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Chivo-Thin";
+  src: url("./assets/fonts/Chivo-Thin.otf") format("opentype");
+  font-weight: Thin;
+  font-style: normal;
+}

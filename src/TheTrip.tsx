@@ -1,6 +1,7 @@
 import { useState } from "react";
 import DisplayCard from "./DisplayCard";
 import SongCard from "./SongCard"
+import SongCarousel from "./SongCarousel";
 import { Spiels } from "./Spiels";
 
 type SongTitle = keyof typeof Spiels;
@@ -17,11 +18,11 @@ function TheTrip() {
 
     return (
       <div>
-        <div className="text-left prose">
-            <h2 className="mb-4 font-moon">The Trip</h2>
+        <div className="text-left prose p-4">
+            <h2>The Trip</h2>
                 <div className="flex">
                 {/* Left side: 4 SongCards in a 2x2 grid */}
-                  <div className="grid grid-cols-2 gap-4 w-1/2">
+                  {/* <div className="grid grid-cols-2 gap-4 w-1/2">
                     <SongCard
                       song={{ title: "The Trip", imageSrc: "1bX5QH6" }}
                       onClick={() => setSelectedSong("The Trip")}/>
@@ -37,10 +38,11 @@ function TheTrip() {
                   </div>
                   <div className="w-1/2 ml-4">
                     <DisplayCard spiel={Spiels[selectedSong]} />
-                  </div>
+                  </div> */}
+                  <SongCarousel />
             </div>
           <br/>
-          <div className="justify-center">
+          <div className="flex justify-center items-center">
             <iframe
                 style={{ border: 0, width: "400px", height: "274px" }}
                 src="https://bandcamp.com/EmbeddedPlayer/album=414743476/size=large/bgcol=ffffff/linkcol=0687f5/artwork=small/transparent=true/"

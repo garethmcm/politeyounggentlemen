@@ -23,6 +23,8 @@ module.exports = withMT({
         junicodecon: ['Junicode-RegCon', 'sans-serif'],
         junicodeboldcon: ['Junicode-BoldCon', 'sans-serif'],
         junicodebold: ['Junicode-Bold', 'sans-serif'],
+        chivoextrabold: ['Chivo-ExtraBold', 'sans-serif'],
+        chivothin: ['Chivo-Thin', 'sans-serif'],
       },
       keyframes: {
         flash: {
@@ -37,13 +39,13 @@ module.exports = withMT({
         DEFAULT: {
           css: {
             h2: {
-              fontFamily: 'Junicode-Bold',
-              fontSize: '1.875rem', // Equivalent to text-2xl
+              fontFamily: 'Chivo-ExtraBold',
+              fontSize: '2rem', // Equivalent to text-2xl
               color: '#ffffff',
             },
             p: {
-              fontFamily: 'Junicode-Reg',
-              fontSize: '1.125rem', // Equivalent to text-lg
+              fontFamily: 'Chivo-Thin',
+              fontSize: '1.25rem', // Equivalent to text-lg
               color: '#ffffff',
             },
           },

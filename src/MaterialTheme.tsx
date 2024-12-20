@@ -8,7 +8,7 @@ export const theme = {
         ripple: false,       // Default ripple effect
         className: `
         font-junicodebold text-white text-2xl normal-case w-64 text-center
-        bg-transparent transition-all hover:shadow-lg
+        bg-transparent transition-all hover:shadow-lg active:font-moon
       `,
       },
     },
