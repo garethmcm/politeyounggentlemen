@@ -45,7 +45,7 @@ module.exports = withMT({
             },
             p: {
               fontFamily: 'Chivo-Thin',
-              fontSize: '1.25rem', // Equivalent to text-lg
+              fontSize: '1.00rem', // Equivalent to text-lg
               color: '#ffffff',
             },
           },

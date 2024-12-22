@@ -1,13 +1,13 @@
-import { useState } from "react";
-import DisplayCard from "./DisplayCard";
-import SongCard from "./SongCard"
+// import { useState } from "react";
+// import DisplayCard from "./DisplayCard";
+// import SongCard from "./SongCard"
 import SongCarousel from "./SongCarousel";
-import { Spiels } from "./Spiels";
+// import { Spiels } from "./Spiels";
 
-type SongTitle = keyof typeof Spiels;
+// type SongTitle = keyof typeof Spiels;
 
 function TheTrip() {
-    const [selectedSong, setSelectedSong] = useState<SongTitle>("The Trip");
+    // const [selectedSong, setSelectedSong] = useState<SongTitle>("The Trip");
 
 //   const songs = [
 //     { title: "The Trip", imageSrc: "1bX5QH6" },
