@@ -12,7 +12,7 @@ export function SongCarousel() {
       onPointerEnterCapture={() => {}}
       onPointerLeaveCapture={() => {}}
       loop
-      className="rounded-xl"
+      className="rounded-xl overflow-hidden"
       style={{ backgroundColor: "rgb(0, 43, 22)" }}
       prevArrow={({ handlePrev }) => (
         <IconButton
