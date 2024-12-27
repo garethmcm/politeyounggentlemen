@@ -9,6 +9,7 @@ function Gigs() {
                 We are currently promoting our latest release, <Link to="/thetrip" className="text-white underline hover:text-primary">The Trip</Link>.<br />
                 We previously released music under the name Mystics, with the EPs Gone Fishin' and Dream Suite highlighting his songs.
             </p>
+            <br />
 
             {/* Spotify iframe for first album */}
             <div className="my-4">

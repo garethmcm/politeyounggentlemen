@@ -1,16 +1,24 @@
 import { Carousel, IconButton } from "@material-tailwind/react";
 
-import plane from "./assets/plane.svg"
-import cup from "./assets/cup.svg"
-import sky from "./assets/sky.jpeg"
-import earth from "./assets/earth.svg"
- 
+import plane from "./assets/plane.svg";
+import cup from "./assets/cup3.svg";
+import starmap from "./assets/starmap.svg";
+import globe from "./assets/globe.svg";
+
 export function SongCarousel() {
   return (
-    <Carousel placeholder="" onPointerEnterCapture={() => {}} onPointerLeaveCapture={() => {}}
+    <Carousel
+      placeholder=""
+      onPointerEnterCapture={() => {}}
+      onPointerLeaveCapture={() => {}}
+      loop
       className="rounded-xl"
+      style={{ backgroundColor: "rgb(0, 43, 22)" }}
       prevArrow={({ handlePrev }) => (
-        <IconButton placeholder="" onPointerEnterCapture={() => {}} onPointerLeaveCapture={() => {}}
+        <IconButton
+          placeholder=""
+          onPointerEnterCapture={() => {}}
+          onPointerLeaveCapture={() => {}}
           variant="text"
           color="white"
           size="lg"
@@ -34,7 +42,10 @@ export function SongCarousel() {
         </IconButton>
       )}
       nextArrow={({ handleNext }) => (
-        <IconButton placeholder="" onPointerEnterCapture={() => {}} onPointerLeaveCapture={() => {}}
+        <IconButton
+          placeholder=""
+          onPointerEnterCapture={() => {}}
+          onPointerLeaveCapture={() => {}}
           variant="text"
           color="white"
           size="lg"
@@ -58,26 +69,44 @@ export function SongCarousel() {
         </IconButton>
       )}
     >
-      <img
-        src={ plane }
-        alt="plane"
-        className="h-full w-full object-cover"
-      />
-      <img
-        src={ cup }
-        alt="cup"
-        className="h-full w-full object-cover"
-      />
-      <img
-        src={ sky }
-        alt="sky"
-        className="h-full w-full object-cover"
-      />
-            <img
-        src={ earth }
-        alt="earth"
-        className="h-full w-full object-cover"
-      />
+      <div className="flex items-center justify-center w-full h-full">
+        <img
+          src={plane}
+          alt="plane"
+          className="object-contain invert"
+          style={{ width: "65%", height: "auto", marginBottom: "10%"}}
+        />
+      </div>
+      <div
+        className="flex items-center justify-center w-full h-full"
+        style={{marginLeft: "4%"}}
+      >
+        <img
+          src={cup}
+          alt="cup"
+          className="object-contain invert"
+          style={{ width: "40%", height: "auto"}}
+        />
+      </div>
+      <div
+        className="flex items-center justify-center w-full h-full"
+        style={{ marginTop: "13%" }}
+      >
+        <img
+          src={starmap}
+          alt="starmap"
+          className="object-contain invert"
+          style={{ width: "70%", height: "auto", marginBottom: "30%" }}
+        />
+      </div>
+      <div className="flex items-center justify-center w-full">
+        <img
+          src={ globe }
+          alt="earth"
+          className="object-contain invert"
+          style={{ width: "50%", height: "auto", marginTop: "20%"}}
+        />
+        </div>
     </Carousel>
   );
 }
