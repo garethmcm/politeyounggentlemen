@@ -69,16 +69,17 @@ export function SongCarousel() {
         </IconButton>
       )}
     >
-      <div className="flex items-center justify-center w-full h-full">
+      <div className="relative flex items-center justify-center w-full h-full">
         <img
           src={plane}
           alt="plane"
           className="object-contain invert"
           style={{ width: "65%", height: "auto", marginBottom: "10%"}}
         />
+        <div className="absolute left-1 top-0 font-moon text-white text-2xl">The Trip</div>
       </div>
       <div
-        className="flex items-center justify-center w-full h-full"
+        className="relative flex items-center justify-center w-full h-full"
         style={{marginLeft: "4%"}}
       >
         <img
@@ -87,26 +88,38 @@ export function SongCarousel() {
           className="object-contain invert"
           style={{ width: "40%", height: "auto"}}
         />
+        <div className="absolute right-7 top-0 font-moon text-white text-2xl">Coffee Cup Baby</div>
       </div>
       <div
-        className="flex items-center justify-center w-full h-full"
+        className="relative flex items-center justify-center w-full h-full"
         style={{ marginTop: "13%" }}
       >
         <img
           src={starmap}
           alt="starmap"
           className="object-contain invert"
-          style={{ width: "70%", height: "auto", marginBottom: "30%" }}
+          style={{ width: "50%", height: "auto", marginBottom: "30%" }}
         />
+        <div
+          className="absolute right-2 bottom-[5.5rem] font-moon text-white text-2xl"
+          style={{ zIndex: 10 }}
+        >
+          That Night
+        </div>
       </div>
-      <div className="flex items-center justify-center w-full">
+      <div className="relative flex items-center justify-center w-full">
         <img
-          src={ globe }
+          src={globe}
           alt="earth"
           className="object-contain invert"
-          style={{ width: "50%", height: "auto", marginTop: "20%"}}
+          style={{ width: "40%", height: "auto", marginTop: "25%" }}
         />
+        <div
+          className="absolute left-2 bottom-0 font-moon text-white text-2xl"
+        >
+          Weird Goodbye
         </div>
+      </div>
     </Carousel>
   );
 }
