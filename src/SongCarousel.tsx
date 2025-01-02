@@ -3,7 +3,10 @@ import { Carousel, IconButton } from "@material-tailwind/react";
 import plane from "./assets/plane.svg";
 import cup from "./assets/cup3.svg";
 import starmap from "./assets/starmap.svg";
+import starrysky from "./assets/starry sky.svg";
 import globe from "./assets/globe.svg";
+import globe2 from "./assets/globe2.svg";
+import globe4 from "./assets/globe4.svg";
 
 export function SongCarousel() {
   return (
@@ -90,7 +93,7 @@ export function SongCarousel() {
         />
         <div className="absolute right-7 top-0 font-moon text-white text-2xl">Coffee Cup Baby</div>
       </div>
-      <div
+      {/* <div
         className="relative flex items-center justify-center w-full h-full"
         style={{ marginTop: "13%" }}
       >
@@ -106,8 +109,24 @@ export function SongCarousel() {
         >
           That Night
         </div>
+      </div> */}
+      <div
+        className="relative flex w-full h-full"
+      >
+        <img
+          src={starrysky}
+          alt="starmap"
+          className="object-cover"
+          style={{ marginTop: "0", width: "100%", height: "100%"}}
+        />
+        <div
+          className="absolute right-1 bottom-2 font-moon text-white text-2xl"
+          style={{ zIndex: 10 }}
+        >
+          That Night
+        </div>
       </div>
-      <div className="relative flex items-center justify-center w-full">
+      {/* <div className="relative flex items-center justify-center w-full">
         <img
           src={globe}
           alt="earth"
@@ -116,6 +135,34 @@ export function SongCarousel() {
         />
         <div
           className="absolute left-2 bottom-0 font-moon text-white text-2xl"
+        >
+          Weird Goodbye
+        </div>
+      </div> */}
+      {/* <div className="relative flex items-center justify-center w-full">
+        <img
+          src={globe2}
+          alt="earth"
+          className="object-contain invert"
+          style={{ width: "70%", height: "auto", marginTop: "14%" }}
+        />
+        <div
+          className="absolute left-1 bottom-[1rem] font-moon text-white text-2xl"
+          style={{ marginBottom: "-12%" }}
+        >
+          Weird Goodbye
+        </div>
+      </div> */}
+      <div className="relative flex items-center justify-center w-full">
+        <img
+          src={globe4}
+          alt="earth"
+          className="object-contain invert"
+          style={{ width: "70%", height: "auto", marginTop: "14%" }}
+        />
+        <div
+          className="absolute left-1 bottom-[1rem] font-moon text-white text-2xl"
+          style={{ marginBottom: "-12%" }}
         >
           Weird Goodbye
         </div>
