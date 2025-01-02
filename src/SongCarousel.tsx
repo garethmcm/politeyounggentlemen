@@ -2,10 +2,10 @@ import { Carousel, IconButton } from "@material-tailwind/react";
 
 import plane from "./assets/plane.svg";
 import cup from "./assets/cup3.svg";
-import starmap from "./assets/starmap.svg";
+// import starmap from "./assets/starmap.svg";
 import starrysky from "./assets/starry sky.svg";
-import globe from "./assets/globe.svg";
-import globe2 from "./assets/globe2.svg";
+// import globe from "./assets/globe.svg";
+// import globe2 from "./assets/globe2.svg";
 import globe4 from "./assets/globe4.svg";
 
 export function SongCarousel() {
