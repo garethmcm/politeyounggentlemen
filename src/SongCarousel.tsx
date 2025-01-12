@@ -1,14 +1,24 @@
 import { Carousel, IconButton } from "@material-tailwind/react";
+import { useState } from "react";
 
 import plane from "./assets/plane.svg";
 import cup from "./assets/cup3.svg";
-// import starmap from "./assets/starmap.svg";
 import starrysky from "./assets/starry sky.svg";
-// import globe from "./assets/globe.svg";
-// import globe2 from "./assets/globe2.svg";
 import globe4 from "./assets/globe4.svg";
 
-export function SongCarousel() {
+type SongCarouselProps = {
+  onSongChange: (song: "The Trip" | "Coffee Cup Baby" | "That Night" | "Weird Goodbye") => void;
+};
+
+export function SongCarousel({ onSongChange }: SongCarouselProps) {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const songs = ["The Trip", "Coffee Cup Baby", "That Night", "Weird Goodbye"];
+
+  const handleSlideChange = (newIndex: number) => {
+    setActiveIndex(newIndex);
+    onSongChange(songs[newIndex] as "The Trip" | "Coffee Cup Baby" | "That Night" | "Weird Goodbye");
+  };
+
   return (
     <Carousel
       placeholder=""
@@ -17,6 +27,22 @@ export function SongCarousel() {
       loop
       className="rounded-xl overflow-hidden"
       style={{ backgroundColor: "rgb(0, 43, 22)" }}
+      navigation={({ setActiveIndex, activeIndex, length }) => (
+        <div className="absolute bottom-4 left-2/4 z-50 flex -translate-x-2/4 gap-2">
+          {new Array(length).fill("").map((_, i) => (
+            <span
+              key={i}
+              className={`block h-1 cursor-pointer rounded-2xl transition-all content-[''] ${
+                activeIndex === i ? "w-8 bg-white" : "w-4 bg-white/50"
+              }`}
+              onClick={() => {
+                setActiveIndex(i);
+                handleSlideChange(i);
+              }}
+            />
+          ))}
+        </div>
+      )}
       prevArrow={({ handlePrev }) => (
         <IconButton
           placeholder=""
@@ -25,7 +51,10 @@ export function SongCarousel() {
           variant="text"
           color="white"
           size="lg"
-          onClick={handlePrev}
+          onClick={() => {
+            handlePrev();
+            handleSlideChange((activeIndex - 1 + songs.length) % songs.length);
+          }}
           className="!absolute top-2/4 left-4 -translate-y-2/4"
         >
           <svg
@@ -52,7 +81,10 @@ export function SongCarousel() {
           variant="text"
           color="white"
           size="lg"
-          onClick={handleNext}
+          onClick={() => {
+            handleNext();
+            handleSlideChange((activeIndex + 1) % songs.length);
+          }}
           className="!absolute top-2/4 !right-4 -translate-y-2/4"
         >
           <svg
@@ -93,23 +125,6 @@ export function SongCarousel() {
         />
         <div className="absolute right-7 top-0 font-moon text-white text-2xl">Coffee Cup Baby</div>
       </div>
-      {/* <div
-        className="relative flex items-center justify-center w-full h-full"
-        style={{ marginTop: "13%" }}
-      >
-        <img
-          src={starmap}
-          alt="starmap"
-          className="object-contain invert"
-          style={{ width: "50%", height: "auto", marginBottom: "30%" }}
-        />
-        <div
-          className="absolute right-2 bottom-[5.5rem] font-moon text-white text-2xl"
-          style={{ zIndex: 10 }}
-        >
-          That Night
-        </div>
-      </div> */}
       <div
         className="relative flex w-full h-full"
       >
@@ -126,33 +141,6 @@ export function SongCarousel() {
           That Night
         </div>
       </div>
-      {/* <div className="relative flex items-center justify-center w-full">
-        <img
-          src={globe}
-          alt="earth"
-          className="object-contain invert"
-          style={{ width: "40%", height: "auto", marginTop: "25%" }}
-        />
-        <div
-          className="absolute left-2 bottom-0 font-moon text-white text-2xl"
-        >
-          Weird Goodbye
-        </div>
-      </div> */}
-      {/* <div className="relative flex items-center justify-center w-full">
-        <img
-          src={globe2}
-          alt="earth"
-          className="object-contain invert"
-          style={{ width: "70%", height: "auto", marginTop: "14%" }}
-        />
-        <div
-          className="absolute left-1 bottom-[1rem] font-moon text-white text-2xl"
-          style={{ marginBottom: "-12%" }}
-        >
-          Weird Goodbye
-        </div>
-      </div> */}
       <div className="relative flex items-center justify-center w-full">
         <img
           src={globe4}

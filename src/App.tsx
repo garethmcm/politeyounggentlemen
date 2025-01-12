@@ -15,7 +15,7 @@ import Logo from './assets/PYG Logo2.jpg';
 function App() {
 
   return (
-<Router>
+    <Router>
       <div className="bg-background">
       <Link to="/"><img
           src={Logo}
