@@ -40,10 +40,16 @@ export function DescriptionCard({ songTitle }: DescriptionCardProps) {
             Recording
           </Button>
         </div>
-        <div>
-          <p className="">
-          {spiel[selectedPart]}
-          </p>
+        <div
+          className="overflow-y-auto"
+          style={{ maxHeight: "500px" }}
+          >
+        <p
+            className=""
+            dangerouslySetInnerHTML={{
+              __html: spiel[selectedPart],
+            }}
+          />
         </div>
       </div>
 
