@@ -8,7 +8,7 @@ export const Spiels: Record<
 
     James lost his grandfather during this time and this song begins to touch on James’s experience with grief. Grieving is a lonely thing and despite having the love and support from family and friends it is something everyone has to go through on their own one way or another, which significantly magnified by the social restrictions which were in place at the time. <br /> <br />
     
-    Musically, the songs were inspired by jazz music from the ‘30s and ‘40s, particularly the music of Louis , incorporating the rich textures of 7th chords and discord but within the format a pop song, with the result being like a begotten nostalgia for a bygone era for a type of music that didn’t really exist at the time, and for years that we never experienced ourselves.
+    Musically, the songs were inspired by jazz music from the ‘30s and ‘40s, particularly the music of Louis Armstrong, incorporating the rich textures of 7th chords and discord but within the format a pop song, with the result being like a begotten nostalgia for a bygone era for a type of music that didn’t really exist at the time, and for years that we never experienced ourselves.
     `,
     Recording: `
     For a short collection of tunes, recording took place over a number of different locations and over a long period of time, albeit with long gaps between dates and production work, what with life getting in the way. <br /> <br />
